@@ -1,0 +1,28 @@
+[package]
+name = "ti" # "trusted_installer"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+winapi = { version = "0.3.9", features = [
+    "winsvc", 
+    "processthreadsapi", 
+    "winbase", 
+    "shellapi", 
+    "winuser", 
+    "securitybaseapi", 
+    "errhandlingapi", 
+    "handleapi",
+    "tlhelp32",
+    "handleapi",
+    "winnt",
+    "winerror",
+    "processthreadsapi",
+    "minwindef",
+] }
+widestring = "0.5"
+windows = { version = "0.48.0", features = ["Win32_Security", "Win32_Foundation", "Win32_System_Diagnostics_ToolHelp"] }
+windows-sys = {version = "0.59.0", features = ["Win32_System_Threading"] }
+winsafe = { version = "0.0.22", features = ["advapi"] }
